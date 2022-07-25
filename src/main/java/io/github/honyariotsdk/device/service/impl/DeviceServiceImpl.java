@@ -5,12 +5,6 @@ import io.github.honyariotsdk.core.model.CommonResponseResult;
 import io.github.honyariotsdk.core.util.HttpUtil;
 import io.github.honyariotsdk.device.service.DeviceService;
 
-
-/**
- * @description 设备服务
- * @author lidesheng
- * @date 2022/7/12 16:22
- */
 public class DeviceServiceImpl implements DeviceService {
 
     public static void main(String[] args) {
