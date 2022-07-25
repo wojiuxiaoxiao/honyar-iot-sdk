@@ -1,4 +1,4 @@
-package com.honyar.iot.sdk.device.model.result;
+package io.github.honyariotsdk.device.model.result;
 
 import lombok.Data;
 

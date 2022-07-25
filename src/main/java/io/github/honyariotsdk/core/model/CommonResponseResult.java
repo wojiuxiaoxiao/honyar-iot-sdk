@@ -1,4 +1,4 @@
-package com.honyar.iot.sdk.core.model;
+package io.github.honyariotsdk.core.model;
 
 import lombok.Data;
 

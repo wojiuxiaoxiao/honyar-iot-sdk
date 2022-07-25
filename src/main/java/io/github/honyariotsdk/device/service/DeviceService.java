@@ -1,4 +1,4 @@
-package com.honyar.iot.sdk.device.service;
+package io.github.honyariotsdk.device.service;
 
 /**
  * @author lidesheng

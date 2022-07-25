@@ -1,9 +1,9 @@
-package com.honyar.iot.sdk.device.service.impl;
+package io.github.honyariotsdk.device.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.honyar.iot.sdk.core.model.CommonResponseResult;
-import com.honyar.iot.sdk.core.util.HttpUtil;
-import com.honyar.iot.sdk.device.service.DeviceService;
+import io.github.honyariotsdk.core.model.CommonResponseResult;
+import io.github.honyariotsdk.core.util.HttpUtil;
+import io.github.honyariotsdk.device.service.DeviceService;
 
 
 /**
