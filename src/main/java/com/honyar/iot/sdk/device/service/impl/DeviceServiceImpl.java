@@ -1,11 +1,9 @@
-package module.device.service.impl;
+package com.honyar.iot.sdk.device.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.aliyun.iot20180120.models.CreateThingModelResponseBody;
-import core.model.CommonResponseResult;
-import core.util.HttpUtil;
-import module.device.model.result.DeviceListResult;
-import module.device.service.DeviceService;
+import com.honyar.iot.sdk.core.model.CommonResponseResult;
+import com.honyar.iot.sdk.core.util.HttpUtil;
+import com.honyar.iot.sdk.device.service.DeviceService;
 
 
 /**

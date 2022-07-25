@@ -1,8 +1,8 @@
-package core.util;
+package com.honyar.iot.sdk.core.util;
 
 import com.alibaba.fastjson.JSONObject;
 import com.squareup.okhttp.*;
-import core.model.CommonResponseResult;
+import com.honyar.iot.sdk.core.model.CommonResponseResult;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
