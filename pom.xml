@@ -1,19 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.honyariotsdk</groupId>
     <artifactId>honyar-iot-sdk</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>honyar-iot-sdk</name>
     <description>Common Tools</description>
     <url>https://github.com/wojiuxiaoxiao/honyar-iot-sdk</url>
-
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
     <developers>
         <developer>
             <id>xiao</id>
@@ -26,91 +27,70 @@
             <timezone>+8</timezone>
         </developer>
     </developers>
-
-
-    <!--开源协议...-->
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-
     <scm>
-        <connection>scm:git:git://https://github.com/w-er/OSSRH-71402.git</connection>
-        <developerConnection>scm:git:ssh://github.com/w-er/OSSRH-71402.git</developerConnection>
-        <url>http://https://github.com/w-er/OSSRH-71402/tree/main</url>
+        <connection>scm:git:git://https://github.com/wojiuxiaoxiao/OSSRH-83000.git</connection>
+        <developerConnection>scm:git:ssh://github.com:wojiuxiaoxiao/OSSRH-83000.git</developerConnection>
+        <url>http://https://github.com:wojiuxiaoxiao/OSSRH-83000/tree/main</url>
     </scm>
 
-    <profiles>
-        <profile>
-            <id>disable-javadoc-doclint</id>
-            <activation>
-                <jdk>[1.8,)</jdk>
-            </activation>
-            <properties>
-                <javadoc.opts>-Xdoclint:none</javadoc.opts>
-            </properties>
-        </profile>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
-        <!-- mvn repository;-->
-<!--        <profile>-->
-<!--            <id>sonatype-oss-release</id>-->
-<!--            <build>-->
-<!--                <plugins>-->
-<!--                    <plugin>-->
-<!--                        <groupId>org.apache.maven.plugins</groupId>-->
-<!--                        <artifactId>maven-source-plugin</artifactId>-->
-<!--                        <version>2.1.2</version>-->
-<!--                        <executions>-->
-<!--                            <execution>-->
-<!--                                <id>attach-sources</id>-->
-<!--                                <goals>-->
-<!--                                    <goal>jar-no-fork</goal>-->
-<!--                                </goals>-->
-<!--                            </execution>-->
-<!--                        </executions>-->
-<!--                    </plugin>-->
-<!--                    <plugin>-->
-<!--                        <groupId>org.apache.maven.plugins</groupId>-->
-<!--                        <artifactId>maven-javadoc-plugin</artifactId>-->
-<!--                        <version>2.10.4</version>-->
-<!--                        <executions>-->
-<!--                            <execution>-->
-<!--                                <id>attach-javadocs</id>-->
-<!--                                <goals>-->
-<!--                                    <goal>jar</goal>-->
-<!--                                </goals>-->
-<!--                                <configuration>-->
-<!--                                    <additionalparam>-Xdoclint:none</additionalparam>-->
-<!--                                </configuration>-->
-<!--                            </execution>-->
-<!--                        </executions>-->
-<!--                    </plugin>-->
-<!--                    <plugin>-->
-<!--                        <groupId>org.apache.maven.plugins</groupId>-->
-<!--                        <artifactId>maven-gpg-plugin</artifactId>-->
-<!--                        <version>1.1</version>-->
-<!--                        <executions>-->
-<!--                            <execution>-->
-<!--                                <id>sign-artifacts</id>-->
-<!--                                <phase>verify</phase>-->
-<!--                                <goals>-->
-<!--                                    <goal>sign</goal>-->
-<!--                                </goals>-->
-<!--                            </execution>-->
-<!--                        </executions>-->
-<!--                    </plugin>-->
-<!--                </plugins>-->
-<!--            </build>-->
-<!--        </profile>-->
-    </profiles>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-<!--    <distributionManagement>-->
-<!--        <repository>-->
-<!--            <id>sonatype-nexus-staging</id>-->
-<!--            <name>Nexus Release Repository</name>-->
-<!--            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
-<!--        </repository>-->
-<!--    </distributionManagement>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
