@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.honyariotsdk</groupId>
+    <groupId>io.github.wojiuxiaoxiao</groupId>
     <artifactId>honyar-iot-sdk</artifactId>
-    <version>1.0</version>
+    <version>0.9.3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>honyar-iot-sdk</name>
@@ -27,20 +27,26 @@
             <timezone>+8</timezone>
         </developer>
     </developers>
+<!--    <scm>-->
+<!--        <connection>scm:git:git://https://github.com/wojiuxiaoxiao/OSSRH-83000.git</connection>-->
+<!--        <developerConnection>scm:git:ssh://github.com:wojiuxiaoxiao/OSSRH-83000.git</developerConnection>-->
+<!--        <url>http://https://github.com:wojiuxiaoxiao/OSSRH-83000/tree/main</url>-->
+<!--    </scm>-->
+
     <scm>
-        <connection>scm:git:git://https://github.com/wojiuxiaoxiao/OSSRH-83000.git</connection>
-        <developerConnection>scm:git:ssh://github.com:wojiuxiaoxiao/OSSRH-83000.git</developerConnection>
-        <url>http://https://github.com:wojiuxiaoxiao/OSSRH-83000/tree/main</url>
+        <connection>https://github.com/wojiuxiaoxiao/honyar-iot-sdk.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:wojiuxiaoxiao/honyar-iot-sdk.git</developerConnection>
+        <url>https://github.com/wojiuxiaoxiao/honyar-iot-sdk</url>
     </scm>
 
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 
